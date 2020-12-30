@@ -1,0 +1,31 @@
+{
+  "name": "psono-to-bitwarden",
+  "version": "1.0.0",
+  "description": "This translates an exported psono.json to bitwarden",
+  "main": "psono-translator.js",
+  "type": "module",
+  "dependencies": {
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robert430404/psono-to-bitwarden.git"
+  },
+  "keywords": [
+    "bitwarde",
+    "psono",
+    "translator",
+    "password",
+    "manager"
+  ],
+  "author": "Robert Cox <robert@studiorclv.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robert430404/psono-to-bitwarden/issues"
+  },
+  "homepage": "https://github.com/robert430404/psono-to-bitwarden#readme"
+}
