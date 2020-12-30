@@ -8,6 +8,8 @@ psono password manager to bitwarden.
 Copy `config.examples.json` to `config.json` and update the sourceFile
 path to point to your exported Psono file.
 
+Install the dependencies with `npm ci`.
+
 ## Execution
 
 Run the script with node like this
