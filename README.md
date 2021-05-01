@@ -5,17 +5,19 @@ psono password manager to bitwarden.
 
 ## Setup
 
-Copy `config.examples.json` to `config.json` and update the sourceFile
-path to point to your exported Psono file.
+Clone the repository to your local machine and install the dependencies
+with the following command:
 
-Install the dependencies with `npm ci`.
+```bash
+npm ci
+```
 
 ## Execution
 
 Run the script with node like this
 
 ```bash
-node psono-translator.js
+node index.js -config=/file/location.json
 ```
 
 The script will output some status messages or errors if there are problems.

@@ -7,9 +7,14 @@
   "dependencies": {
     "uuid": "^8.3.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2",
+    "prettier": "^2.2.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --ui bdd './**/*.spec.*'",
+    "lint": "npx prettier --write ."
   },
   "repository": {
     "type": "git",

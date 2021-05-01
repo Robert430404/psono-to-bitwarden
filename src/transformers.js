@@ -1,30 +1,30 @@
-import {noteItem, loginItem} from './types.js'
+import { noteItem, loginItem, sourcePsonoTypes } from './types.js';
 
 export const transformItem = (item) => {
   // Check if we have what should be translated as a note
-  if (['note', 'bookmark'].includes(item.type)) {
+  if ([sourcePsonoTypes.note, sourcePsonoTypes.bookmark].includes(item.type)) {
     return {
       type: noteItem,
       name: item.name,
-      secureNote: {}
-    }
+      secureNote: {},
+    };
   }
 
   // Otherwise assume it's a login
-  let note
+  let note;
 
-  const credentials = {}
+  const credentials = {};
 
   if (item.website_password_username) {
-    credentials.username = item.website_password_username
+    credentials.username = item.website_password_username;
   }
 
   if (item.website_password_password) {
-    credentials.password = item.website_password_password
+    credentials.password = item.website_password_password;
   }
 
   if (item.website_password_notes) {
-    note = item.website_password_notes
+    note = item.website_password_notes;
   }
 
   if (item.website_password_url) {
@@ -32,8 +32,8 @@ export const transformItem = (item) => {
       {
         match: null, // Use default matching algo
         uri: item.website_password_url,
-      }
-    ]
+      },
+    ];
   }
 
   return {
@@ -41,5 +41,5 @@ export const transformItem = (item) => {
     name: item.name,
     login: credentials,
     note,
-  }
-}
+  };
+};
